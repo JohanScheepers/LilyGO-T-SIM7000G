@@ -21,42 +21,42 @@ The LilyGo SIM7000G listen on MQTT to messages to know its state. If the user ch
 
 ### Mqtt
 
-mqtt_user = "IamHere"
-mqtt_pass = "*************"
-mqtt_broker = 10.0.0.1
-mqtt_port = 8883
-ma=qtt_topic = EUI
+* []()mqtt_user = "IamHere"
+* []()mqtt_pass = "*************"
+* []()mqtt_broker = 10.0.0.1
+* []()mqtt_port = 8883
+* []()ma=qtt_topic = EUI
 
 
 ### Json
 
 1. Downlink setting outputs active
-      "payload": {
+      * []()"payload": {
             "eui": "24E124136B320041",
             "set": "0", // Bool 0/1
         }
 
 2. Uplink setting were done via Bluetooth
-         "payload": {
+         * []()"payload": {
             "eui": "24E124136B320041",
             "set": "0", // Bool 0/1
          }
 
 3. Uplink setting location
-         "payload": {
+         * []()"payload": {
             "eui": "24E124136B320041",
             "lattitude": -29.992233,
             "longnitude": 30.112233
          }
 
 4. Downlink requsting location
-         "payload": {
+         * []()"payload": {
             "eui": "24E124136B320041",
             "location":  "1", // Bool 1
          }
 
 5. Uplink updating battey voltage
-         "payload": {
+         * []()"payload": {
             "eui": "24E124136B320041",
             "battV":  4.102
          }
