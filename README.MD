@@ -1,6 +1,11 @@
 <h1 align = "center">LilyGo SIM7000G</h1>
 
-Two main versions of the LilyGo SIM7000G have been released with the current board having better power management than the old board.
+LilyGo SIM7000G will have two inputs, PRI and magnetic reed switch. There will be two outputs, one will be on/off and the other driving a servo to 90, delay 3 seconds and then back to 0.
+
+The LilyGo SIM7000G will also upload its GPS location once a day.
+
+XXXXXXX
+
 ### Version 20200415
 
    This board is an improvement of the original with fixes added that where recommended from feedback.
