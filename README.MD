@@ -2,9 +2,10 @@
 
 LilyGo SIM7000G will have two inputs, PRI and magnetic reed switch. There will be two outputs, one will be on/off and the other driving a servo to 90, delay 3 seconds and then back to 0.
 
-The LilyGo SIM7000G will also upload its GPS location once a day.
+The LilyGo SIM7000G will also upload via MQTT its GPS location once a day and the battery voltage if it changes by 5%.
 
-XXXXXXX
+The LilyGo SIM7000G listen on MQTT to mesages to know it's state. If the user changes the state the will update it state.
+
 
 ### Version 20200415
 
