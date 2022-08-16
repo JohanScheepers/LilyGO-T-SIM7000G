@@ -32,6 +32,7 @@ The LilyGo SIM7000G listen on MQTT to messages to know its state. If the user ch
 
 1. Downlink setting outputs active
       
+      
       "payload": {
             "eui": "24E124136B320041",
             "message": "setactive",
