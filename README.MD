@@ -30,7 +30,7 @@ The LilyGo SIM7000G listen on MQTT to messages to know its state. If the user ch
 
 ### Json
 
-1. Downlink setting outputs active
+1. Downlink setting outputs active.
       
       "payload": {
             "eui": "24E124136B320041",
@@ -40,7 +40,7 @@ The LilyGo SIM7000G listen on MQTT to messages to know its state. If the user ch
             "offtime": "01:00"
         }
 
-2. Uplink setting were done via Bluetooth, Liligo updating DB
+2. Uplink setting were done via Bluetooth, Liligo updating DB.
          
          "payload": {
             "eui": "24E124136B320041",
@@ -51,7 +51,7 @@ The LilyGo SIM7000G listen on MQTT to messages to know its state. If the user ch
             "longnitude": 30.112233
          }
 
-3. Uplink setting location
+3. Uplink setting location.
          
          "payload": {
             "eui": "24E124136B320041",
@@ -60,17 +60,28 @@ The LilyGo SIM7000G listen on MQTT to messages to know its state. If the user ch
             "longnitude": 30.112233
          }
 
-4. Downlink requsting location
+4. Downlink requsting location.
          
          "payload": {
             "eui": "24E124136B320041",
             "message":  "updatelocation"
          }
 
-5. Uplink updating battey voltage
+5. Uplink updating battey voltage.
          
          "payload": {
             "eui": "24E124136B320041",
             "message": "updatbattV",
             "battV":  4.102
+         }
+
+6. Uplink updating that the PIR or reed swithch changed state.
+
+         "payload": {
+            "eui": "24E124136B320041",
+            "message": "setbluetooth",
+            "pir":  "0", // Bool 0/1
+            "battV":  4.102,
+            "lattitude": -29.992233,
+            "longnitude": 30.112233
          }
