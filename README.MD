@@ -10,7 +10,7 @@ The LilyGo SIM7000G listen on MQTT to messages to know its state. If the user ch
 
 1. Will listen and publish to a MQTT broker via NB-IOT. If NB-IOT is not available it needs the cycle thru 4G, 3G and 2G and set to the most reliable mode.
 2. The LilyGo listen to MQTT stream.
-3. The MQTT stream contain information as to if the outputs needs to be active or not. It will save this state.
+3. The MQTT stream contain information as to if the outputs needs to be active or not. It will save this state. There will be a real time clock as you can set if the Liligo needs the be active between times.
 4. If the outputs are set to active, when the PIR is triggered or the reed switch change state. The output go high for 3 seconds and the servo output will cycle from 0 => 90 delay 2 seconds and 90=>0 
 5. It will at the same time publish to the MQTT broker that the PIR is triggered or the reed switch change state
 6. When the battery voltage changes more that 5% it will publish to the MQTT broker the new voltage.
@@ -34,20 +34,28 @@ The LilyGo SIM7000G listen on MQTT to messages to know its state. If the user ch
       
       "payload": {
             "eui": "24E124136B320041",
-            "set": "0", // Bool 0/1
+            "message": "setactive",
+            "set": "0", // Bool 0/1,
+            "on_time": "00:00",
+            "offtime": "01:00"
         }
 
-2. Uplink setting were done via Bluetooth
+2. Uplink setting were done via Bluetooth, Liligo updating DB
          
          "payload": {
             "eui": "24E124136B320041",
-            "set": "0", // Bool 0/1
+            "message": "setbluetooth",
+            "bluetooth":  "0", // Bool 0/1
+            "battV":  4.102,
+            "lattitude": -29.992233,
+            "longnitude": 30.112233
          }
 
 3. Uplink setting location
          
          "payload": {
             "eui": "24E124136B320041",
+            "message": "setlocation",
             "lattitude": -29.992233,
             "longnitude": 30.112233
          }
@@ -56,12 +64,13 @@ The LilyGo SIM7000G listen on MQTT to messages to know its state. If the user ch
          
          "payload": {
             "eui": "24E124136B320041",
-            "location":  "1", // Bool 1
+            "message":  "updatelocation"
          }
 
 5. Uplink updating battey voltage
          
          "payload": {
             "eui": "24E124136B320041",
+            "message": "updatbattV",
             "battV":  4.102
          }
